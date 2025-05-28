@@ -1,0 +1,76 @@
+Books:
+    Auto Assigned ID
+    title
+    author
+    category
+    pages
+
+    Create Read Delete
+
+Loan:
+    book
+    loanDate
+
+    Create Read Delete
+
+Member:
+    ID(Manuel input)
+    name
+    email
+    loanList
+
+    borrowBook(book,date)
+    returnBook(book,date)
+    getLoans
+
+Library:
+    books(all)
+    allLoans
+    members
+    bookID
+
+    addBook
+    removeBook
+    listBooks
+    findBookbyTitle
+    findBooksbyAuthor
+    generateUniqueID (for books)
+
+    addMember
+    removeMember
+        must return all books
+    listMembers
+    findMemberbyID
+
+
+
+Main:
+    MainMenu:
+    "Welcome to Library System"
+    "Please select action (enter a number)"
+    "0- Exit program
+    1 - Membership options:
+        0- Exit to menu
+        1- Add member
+        2- Remove member
+        3- List members
+        4- findMemberbyID
+        5- findMemberbyName
+        6- findMemberbyEmail
+        7- listLoanBooks
+    2- Loan options:
+        0- Exit to menu
+        1- borrowBook(memberID,bookID)
+        2- returnBook(memberID,bookID)
+    3- Book options
+        0- Exit to menu
+        1- List all books
+        2- List avaliable books
+        3- listLoanBooks(all)
+        
+        4-findBookbyTitle
+        5-findBooksbyAuthor
+        6-findBooksbyCategory
+        "
+
+Notes:
