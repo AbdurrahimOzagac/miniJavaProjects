@@ -4,10 +4,15 @@ public class Loan {
 
     private Book book;
     private LocalDate loanDate;
+    private LocalDate returnDate;
 
     public Loan(Book book, LocalDate loanDate) {
         this.book = book;
         this.loanDate = loanDate;
+    }
+
+    public boolean isReturned() {
+        return returnDate != null;
     }
 
     public Book getBook() {
@@ -23,7 +28,15 @@ public class Loan {
     }
 
     public void setLoanDate(LocalDate loanDate) {
-        this.loanDate = loanDate; 
+        this.loanDate = loanDate;
+    }
+
+    public LocalDate getReturnDate() {
+        return returnDate;
+    }
+
+    public void setReturnDate(LocalDate returnDate) {
+        this.returnDate = returnDate;
     }
 
 }

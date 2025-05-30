@@ -1,5 +1,6 @@
 public class Book {
 
+    private boolean available;
     private final int ID;
     private String title;
     private String author;
@@ -12,8 +13,16 @@ public class Book {
         this.category = category;
         this.ID = id;
         this.pages = pages;
+        this.available = true;
     }
 
+    public boolean isAvailable() {
+        return available;
+    }
+
+    public void setAvailable(boolean available) {
+        this.available = available;
+    }
 
     public String getTitle() {
         return title;
@@ -43,11 +52,12 @@ public class Book {
         return pages;
     }
 
-    public void setPages(int pages) {
+    public boolean setPages(int pages) {
         if (pages >= 0) {
             this.pages = pages;
+            return true;
         } else {
-            System.out.println("Page number cannot be negative");
+            return false;
         }
     }
 

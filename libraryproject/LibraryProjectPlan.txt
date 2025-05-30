@@ -1,4 +1,5 @@
 Books:
+    isAvaliable
     Auto Assigned ID
     title
     author
@@ -10,6 +11,7 @@ Books:
 Loan:
     book
     loanDate
+    returnDate
 
     Create Read Delete
 
@@ -19,8 +21,6 @@ Member:
     email
     loanList
 
-    borrowBook(book,date)
-    returnBook(book,date)
     getLoans
 
 Library:
@@ -29,18 +29,24 @@ Library:
     members
     bookID
 
-    addBook
-    removeBook
-    listBooks
-    findBookbyTitle
-    findBooksbyAuthor
-    generateUniqueID (for books)
+    addBook+
+    removeBook+
+    listBooks+
+    findBookbyTitle+
+    findBooksbyAuthor+
+    findBooksbyCategory+
+    generateUniqueID (for books)+
 
-    addMember
-    removeMember
-        must return all books
-    listMembers
-    findMemberbyID
+    addMember+
+    listMembers+
+    findMemberbyID+
+    findMemberbyName+
+    findMemberbyEmail+
+    isMemberExist+
+
+    borrowBook(book,member,date*)+
+    returnBook(book,member,date*)+
+
 
 
 
@@ -65,7 +71,7 @@ Main:
     3- Book options
         0- Exit to menu
         1- List all books
-        2- List avaliable books
+        2- List all avaliable books
         3- listLoanBooks(all)
         
         4-findBookbyTitle
