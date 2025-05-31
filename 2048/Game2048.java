@@ -6,15 +6,22 @@ public class Game2048 {
     Random rand = new Random();
 
     private final int boardSize = 4;    //Board size is adjustable
-    private final int[][] board = new int[boardSize][boardSize];
+    public final int[][] board = new int[boardSize][boardSize];
 
     public void printBoard() {
+        System.out.println();
         for (int[] row : board) {
             for (int num : row) {
-                System.out.print(num + "  ");
+                if (num != 0) {
+                    System.out.printf("%-4d", num); 
+                }else {
+                    System.out.printf("%-4s", "-");
+                }
+
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public void gameLoop() {
